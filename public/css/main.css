@@ -43,7 +43,8 @@ h1 {
 }
 
 .weird-character {
+  font-family: Arial, sans-serif;
   color: #eaeaea;
-  font-weight: 800;
-  font-size: 45px;
+  font-weight: 900;
+  font-size: 46px;
 }
