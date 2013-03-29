@@ -1,0 +1,2 @@
+#!/bin/sh
+scp -r public/* poly:/srv/www/henrik.nyh.se/public_html/
