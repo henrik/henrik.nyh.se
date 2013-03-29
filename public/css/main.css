@@ -44,7 +44,15 @@ h1 {
 
 .weird-character {
   font-family: Arial, sans-serif;
-  color: #eaeaea;
+  color: #eee;
   font-weight: 900;
   font-size: 46px;
+}
+
+.weird-character:hover {
+  color: #23ccbe;
+}
+
+.the-pug {
+  width: 300px;
 }
