@@ -53,6 +53,18 @@ h1 {
   color: #23ccbe;
 }
 
+ul.elsewhere {
+  font-size: 16px;
+  list-style-type: none;
+  margin: 40px 0;
+  padding: 0;
+}
+
+ul.elsewhere li {
+  display: inline;
+  margin: 0 10px;
+}
+
 .the-pug {
   width: 300px;
 }
