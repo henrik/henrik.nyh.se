@@ -1,2 +1,2 @@
 #!/bin/sh
-scp -r public/* poly:/srv/www/henrik.nyh.se/public_html/
+scp -r public/* pacific:/var/www/henrik.nyh.se/public_html/
