@@ -29,7 +29,7 @@ a:hover {
   border-color: #bbb;
 }
 
-b {
+strong {
   font-weight: 400;
 }
 
@@ -38,7 +38,7 @@ h1 {
   font-size: 50px;
 }
 
-.at, .host {
+.at {
   color: #b8d8d5;
 }
 
