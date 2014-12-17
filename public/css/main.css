@@ -1,21 +1,51 @@
+/* LAYOUT */
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 body {
-  background: #fbfbf9;
-  color: #330;
-  padding: 80px 20px;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 22px;
-  text-shadow: 1px 1px 1px #fff;
-  font-weight: 300;
+
+  /* Vertically center in modern browsers: http://caniuse.com/#feat=flexbox */
+  display: flex;
+  align-items: center;
 }
 
 .page {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  /* So the centered content doesn't burst through the top of a short viewport. */
+  max-height: 100%;
 }
 
-.content {
-  margin-top: 40px;
+.container {
+  /*
+   Serves two purposes:
+   1. Margin against top of viewport if viewport is not tall enough to vertically center.
+   2. Offset vertical centering so it's actually slightly above center (looks better).
+  */
+  margin: 40px 0 100px;
+}
+
+.the-pug {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+
+/* STYLING */
+
+body {
+  background: #fbfbf9;
+  color: #330;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px #fff;
 }
 
 a, a:visited {
@@ -52,8 +82,4 @@ ul.elsewhere {
 ul.elsewhere li {
   display: inline;
   margin: 0 10px;
-}
-
-.the-pug {
-  width: 300px;
 }
