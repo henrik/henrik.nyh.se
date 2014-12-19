@@ -12,22 +12,21 @@ body {
   align-items: center;
 }
 
-.page {
+.outer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 
-  /* So the centered content doesn't burst through the top of a short viewport. */
+  /* Prevent the vertically centered content from bursting through the top of a short viewport. */
   max-height: 100%;
 }
 
-.container {
+.inner-container {
   /*
-   Serves two purposes:
-   1. Margin against top of viewport if viewport is not tall enough to vertically center.
-   2. Offset vertical centering so it's actually slightly above center (looks better).
+   The vertical margin serves to
+   1. distance us from the top of the viewport if it's not tall enough to vertically center
+   2. offset the vertical centering so it's actually slightly above center (which looks better)
   */
-  margin: 40px 0 100px;
+  margin: 40px 20px 100px;
 }
 
 .the-pug {
