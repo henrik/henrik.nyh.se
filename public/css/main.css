@@ -46,7 +46,7 @@ body {
   font-weight: 300;
 }
 
-strong {
+strong, a {
   font-weight: 400;
 }
 
