@@ -1,7 +1,6 @@
 /* LAYOUT */
 
 html, body {
-  margin: 0;
   height: 100%;
 }
 
@@ -32,8 +31,8 @@ body {
 }
 
 .the-pug {
-  width: 300px;
-  margin-bottom: 30px;
+  width: 300px;  /* Shrink for retina. */
+  margin-bottom: 20px;
 }
 
 
@@ -42,10 +41,14 @@ body {
 body {
   background: #fbfbf9;
   color: #330;
+  text-shadow: 1px 1px 1px #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 22px;
   font-weight: 300;
-  text-shadow: 1px 1px 1px #fff;
+}
+
+strong {
+  font-weight: 400;
 }
 
 a, a:visited {
@@ -54,13 +57,9 @@ a, a:visited {
   border-bottom: 1px solid #ededed;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #01aa9c;
   border-color: #bbb;
-}
-
-strong {
-  font-weight: 400;
 }
 
 .at {
