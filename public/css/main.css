@@ -33,7 +33,7 @@ body {
    2. offset the vertical centering so it's actually slightly above center (which looks better)
    A margin won't achieve #1 in Safari/Mobile Safari; we need padding.
   */
-  padding: 40px 20px 60px;
+  padding: 40px 20px 70px;
 }
 
 @media only screen and (max-width: 40rem) {
