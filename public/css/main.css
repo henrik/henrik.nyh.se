@@ -26,7 +26,7 @@ body {
    1. distance us from the top of the viewport if it's not tall enough to vertically center
    2. offset the vertical centering so it's actually slightly above center (which looks better)
   */
-  margin: 40px 20px 100px;
+  margin: 40px 20px 80px;
 }
 
 .the-pug {
