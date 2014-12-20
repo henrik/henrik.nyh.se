@@ -53,10 +53,7 @@ body {
   background: #fbfbf9;
   color: #330;
   text-shadow: 1px 1px 1px #fff;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 1.5;
+  font: 300 22px/1.5 "Source Sans Pro", sans-serif;
 }
 
 strong, a {
