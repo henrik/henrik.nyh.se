@@ -46,6 +46,10 @@ body {
   margin-bottom: 20px;
 }
 
+ul.elsewhere {
+  margin-top: 40px;
+}
+
 
 /* STYLING */
 
@@ -82,7 +86,6 @@ a:hover, a:focus {
 ul.elsewhere {
   font-size: 16px;
   list-style-type: none;
-  margin: 40px 0;
   padding: 0;
 }
 
