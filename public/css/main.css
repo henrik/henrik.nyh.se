@@ -36,8 +36,13 @@ body {
   padding: 40px 20px 60px;
 }
 
+@media only screen and (max-width: 40rem) {
+  .inner-container {
+    padding: 40px 20px;
+  }
+}
+
 .the-pug {
-  width: 300px;  /* Shrink for retina. */
   margin-bottom: 20px;
 }
 
@@ -71,6 +76,10 @@ a:hover, a:focus {
 
 .at {
   color: #b8d8d5;
+}
+
+.the-pug {
+  width: 300px;  /* Shrink for retina. */
 }
 
 ul.elsewhere {
