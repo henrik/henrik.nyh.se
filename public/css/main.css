@@ -8,8 +8,14 @@ body {
   text-align: center;
 
   /* Vertically center in modern browsers: http://caniuse.com/#feat=flexbox */
+
+  /* Chrome, Firefox */
   display: flex;
   align-items: center;
+
+  /* Safari */
+  display: -webkit-box;
+  -webkit-box-align: center;
 }
 
 .outer-container {
