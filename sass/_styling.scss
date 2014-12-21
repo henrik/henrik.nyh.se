@@ -1,0 +1,42 @@
+body {
+  background: $yellowish-white;
+  color: $yellowish-black;
+  text-shadow: 1px 1px 1px #fff;
+  font: 300 22px/1.5 "Source Sans Pro", sans-serif;
+}
+
+strong, a {
+  font-weight: 400;
+}
+
+a {
+  &, &:visited {
+    color: $turquoise;
+    text-decoration: none;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  &:hover, &:focus {
+    color: $dark-turquoise;
+    border-color: $dark-gray;
+  }
+}
+
+.at {
+  color: $light-turquoise;
+}
+
+.the-pug {
+  width: 300px;  // Shrink for retina.
+}
+
+ul.elsewhere {
+  font-size: 16px;
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    display: inline;
+    margin: 0 10px;
+  }
+}

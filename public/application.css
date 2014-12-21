@@ -497,18 +497,14 @@ table {
   border-spacing: 0;
 }
 
-/* LAYOUT */
 html, body {
   height: 100%;
 }
 
 body {
   text-align: center;
-  /* Vertically center in modern browsers: http://caniuse.com/#feat=flexbox */
-  /* Chrome, Firefox */
   display: flex;
   align-items: center;
-  /* Safari */
   display: -webkit-box;
   -webkit-box-align: center;
 }
@@ -516,17 +512,10 @@ body {
 .outer-container {
   max-width: 1200px;
   margin: 0 auto;
-  /* Prevent the vertically centered content from bursting through the top of a short viewport. */
   max-height: 100%;
 }
 
 .inner-container {
-  /*
-  Serves to
-    1. distance us from the top of the viewport if it's not tall enough to vertically center
-    2. offset the vertical centering so it's actually slightly above center (which looks better)
-  A margin won't achieve #1 in Safari/Mobile Safari; we need padding.
-  */
   padding: 40px 20px 70px;
 }
 
@@ -543,10 +532,9 @@ ul.elsewhere {
   margin-top: 40px;
 }
 
-/* STYLING */
 body {
   background: #fbfbf9;
-  color: #330;
+  color: #333300;
   text-shadow: 1px 1px 1px #fff;
   font: 300 22px/1.5 "Source Sans Pro", sans-serif;
 }
@@ -560,10 +548,9 @@ a, a:visited {
   text-decoration: none;
   border-bottom: 1px solid #ededed;
 }
-
 a:hover, a:focus {
   color: #01aa9c;
-  border-color: #bbb;
+  border-color: #bbbbbb;
 }
 
 .at {
@@ -572,7 +559,6 @@ a:hover, a:focus {
 
 .the-pug {
   width: 300px;
-  /* Shrink for retina. */
 }
 
 ul.elsewhere {
@@ -580,7 +566,6 @@ ul.elsewhere {
   list-style-type: none;
   padding: 0;
 }
-
 ul.elsewhere li {
   display: inline;
   margin: 0 10px;
