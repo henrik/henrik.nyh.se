@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# http://sass-lang.com/documentation/file.SASS_REFERENCE.html#using_sass
+bundle exec sass --style expanded --watch sass/application.scss:public/application.css

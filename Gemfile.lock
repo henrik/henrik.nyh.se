@@ -1,0 +1,11 @@
+GEM
+  specs:
+    rb-fsevent (0.9.4)
+    sass (3.2.19)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rb-fsevent
+  sass
