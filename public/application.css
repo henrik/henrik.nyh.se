@@ -539,7 +539,7 @@ body {
   font: 300 22px/1.5 "Source Sans Pro", sans-serif;
 }
 
-strong, a {
+a, b {
   font-weight: 400;
 }
 
