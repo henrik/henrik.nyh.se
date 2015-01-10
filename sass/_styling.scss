@@ -32,13 +32,13 @@ a {
   height: 242px;
 }
 
-ul.elsewhere {
+.elsewhere {
   font-size: 16px;
   list-style-type: none;
   padding: 0;
+}
 
-  li {
-    display: inline;
-    margin: 0 10px;
-  }
+.elsewhere__item {
+  display: inline;
+  margin: 0 10px;
 }
