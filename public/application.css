@@ -534,7 +534,7 @@ body {
 
 body {
   background: #fbfbf9;
-  color: #333300;
+  color: #330;
   text-shadow: 1px 1px 1px #fff;
   font: 300 22px/1.5 "Source Sans Pro", sans-serif;
 }
@@ -550,7 +550,7 @@ a, a:visited {
 }
 a:hover, a:focus {
   color: #01aa9c;
-  border-color: #bbbbbb;
+  border-color: #bbb;
 }
 
 .at {
@@ -567,8 +567,9 @@ a:hover, a:focus {
   list-style-type: none;
   padding: 0;
 }
-
 .elsewhere__item {
   display: inline;
   margin: 0 10px;
 }
+
+/*# sourceMappingURL=application.css.map */
