@@ -4,4 +4,4 @@
 bundle exec sass --style expanded sass/application.scss public/application.css
 
 # Upload to server
-scp -r public/* harakiri:apps/henrik.nyh.se/
+scp -r public/* static:sites/henrik.nyh.se/
