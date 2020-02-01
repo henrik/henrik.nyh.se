@@ -29,8 +29,6 @@ open public/index.html
 
 ## Production
 
-To convert SCSS to CSS and deploy by scp:
+Push to deploy on Netlify.
 
-```
-script/deploy
-```
+This also converts SCSS to CSS, whether or not you've already done so locally.

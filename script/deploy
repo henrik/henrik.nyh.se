@@ -1,6 +1,0 @@
-#!/bin/sh
-
-script/build
-
-# Upload to server
-scp -r public/* static:sites/henrik.nyh.se/

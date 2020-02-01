@@ -1,7 +1,0 @@
-# https://render.com/docs/yaml-spec
-services:
-  - type: web
-    name: henrik.nyh.se
-    env: static
-    buildCommand: script/build
-    staticPublishPath: ./public
