@@ -553,6 +553,15 @@ a:hover, a:focus {
   border-color: #bbb;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  margin-top: 45px;
+  font-size: 20px;
+}
+
 .at {
   color: #b8d8d5;
 }
@@ -560,6 +569,16 @@ a:hover, a:focus {
 .the-pug {
   width: 320px;
   height: 242px;
+}
+
+.long-content {
+  text-align: left;
+  font-size: 18px;
+  max-width: 30em;
+  margin: 45px 0;
+}
+.long-content li {
+  margin: 10px 0;
 }
 
 .elsewhere {
