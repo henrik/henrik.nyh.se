@@ -13,6 +13,12 @@ body {
   margin: 0;
   padding: 20px;
 }
+@media (max-width: 40rem) {
+  body {
+    align-items: start;
+    padding: 20px 10px;
+  }
+}
 
 .outer-container {
   max-width: 1200px;
@@ -21,19 +27,16 @@ body {
 }
 
 .inner-container {
-  padding-top: 40px;
-  padding-bottom: 70px;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
-
 @media (max-width: 40rem) {
-  body {
-    align-items: start;
-  }
-
   .inner-container {
-    padding: 20px 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
+
 .mid-top-space {
   margin-top: 35px;
 }
