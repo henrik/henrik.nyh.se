@@ -3,7 +3,7 @@ html
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1"
-    title = current_page.data.title
+    title = [ current_page.data.title, "Henrik Nyh" ].compact.join(" • ")
     link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"
     = stylesheet_link_tag "site"
 
@@ -36,6 +36,6 @@ html
         nav class=(home_page? ? "big-top-space" : "mid-top-space")
           ul.links
             = list_link_to_unless_current("Uses", "/uses")
-            = list_link_to("Projects", "https://nyh.name")
+            = list_link_to_unless_current("Projects", "/projects")
 
         = yield
