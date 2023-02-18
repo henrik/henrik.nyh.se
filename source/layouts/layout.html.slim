@@ -14,24 +14,9 @@ html
     .outer-container
       .inner-container
 
-        - if home_page?
+        a href=(home_page? ? nil : "/") class="a--undecorated"
           .avatar-wrapper
-            img#avatar.avatar src="/images/me.png"
-            javascript:
-              const img = document.images.avatar
-              const timeZone = "Europe/London"
-
-              try {
-                const hourString = new Date().toLocaleString("en-GB", { timeZone, hour: "numeric" })
-                const hour = parseInt(hourString, 10)
-                if (hour >= 23 || hour < 7) img.src = "/images/me-sleeping.png"
-              } catch {
-                // Silently handle old browsers, browser not supporting TZ etc.
-              }
-        - else
-          a href="/" class="a--undecorated"
-            .avatar-wrapper
-              img.avatar.avatar--small src="/images/me.png" alt=""
+            img#avatar.avatar class=("avatar--small" unless home_page?) src="/images/me.png" alt=""
 
         nav class=(home_page? ? "big-top-space" : "mid-top-space")
           ul.links
@@ -40,3 +25,5 @@ html
             = list_link_to_unless_current("Elsewhere", "/elsewhere")
 
         = yield
+
+        = javascript_include_tag "site"
