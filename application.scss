@@ -30,8 +30,8 @@ body {
   padding: 20px;
 
   @include phone-size {
+    font-size: 18px;
     align-items: start;
-    padding: 20px 10px;
   }
 }
 

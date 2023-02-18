@@ -15,8 +15,8 @@ body {
 }
 @media (max-width: 40rem) {
   body {
+    font-size: 18px;
     align-items: start;
-    padding: 20px 10px;
   }
 }
 
