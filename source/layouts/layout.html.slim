@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title = current_page.data.title
+    link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"
+    = stylesheet_link_tag "site"
+
+    / https://til.simonwillison.net/mastodon/verifying-github-on-mastodon
+    link rel="me" href="https://ruby.social/@henrik"
+
+  body
+    .outer-container
+      .inner-container
+
+        - if home_page?
+          .avatar-wrapper
+            img#avatar.avatar src="/images/me.png"
+            javascript:
+              const img = document.images.avatar
+              const timeZone = "Europe/London"
+
+              try {
+                const hourString = new Date().toLocaleString("en-GB", { timeZone, hour: "numeric" })
+                const hour = parseInt(hourString, 10)
+                if (hour >= 23 || hour < 7) img.src = "/images/me-sleeping.png"
+              } catch {
+                // Silently handle old browsers, browser not supporting TZ etc.
+              }
+        - else
+          a href="/" class="a--undecorated"
+            .avatar-wrapper
+              img.avatar.avatar--small src="/images/me.png" alt=""
+
+        nav class=(home_page? ? "big-top-space" : "mid-top-space")
+          ul.links
+            = list_link_to_unless_current("Uses", "/uses")
+            = list_link_to("Projects", "https://nyh.name")
+
+        = yield
