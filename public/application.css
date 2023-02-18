@@ -8,6 +8,9 @@ body {
   align-items: center;
   display: -webkit-box;
   -webkit-box-align: center;
+  background: white;
+  color: #330;
+  font: 300 20px/1.5 "Source Sans Pro", sans-serif;
 }
 
 .outer-container {
@@ -35,12 +38,6 @@ body {
 
 .big-top-space {
   margin-top: 45px;
-}
-
-body {
-  background: white;
-  color: #330;
-  font: 300 20px/1.5 "Source Sans Pro", sans-serif;
 }
 
 a, b {

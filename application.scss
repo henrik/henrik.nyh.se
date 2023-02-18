@@ -1,0 +1,130 @@
+$yellowish-black: #330;
+
+$turquoise: #23ccbe;
+$light-turquoise: #b8d8d5;
+$dark-turquoise: #01aa9c;
+
+$light-gray: #ededed;
+$dark-gray: #bbb;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  text-align: center;
+
+  // Vertically center in modern browsers: http://caniuse.com/#feat=flexbox
+
+  // Chrome, Firefox
+  display: flex;
+  align-items: center;
+
+  // Safari
+  display: -webkit-box;
+  -webkit-box-align: center;
+
+  background: white;
+  color: $yellowish-black;
+  font: 300 20px/1.5 "Source Sans Pro", sans-serif;
+}
+
+.outer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  // Prevent the vertically centered content from bursting through the top of a short viewport.
+  max-height: 100%;
+}
+
+.inner-container {
+  // Serves to
+  //   1. distance us from the top of the viewport if it's not tall enough to vertically center
+  //   2. offset the vertical centering so it's actually slightly above center (which looks better)
+  // A margin won't achieve #1 in Safari/Mobile Safari; we need padding.
+  padding: 40px 20px 70px;
+}
+
+@media only screen and (max-width: 40rem) {
+  .inner-container {
+    padding: 40px 20px;
+  }
+}
+
+.the-pug {
+  margin-bottom: 20px;
+}
+
+.small-top-space { margin-top: 30px; }
+.big-top-space { margin-top: 45px; }
+
+a, b {
+  font-weight: 400;
+}
+
+a {
+  &, &:visited {
+    color: $turquoise;
+    text-decoration: none;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  &:hover, &:focus {
+    color: $dark-turquoise;
+    border-color: $dark-gray;
+  }
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  margin-top: 45px;
+  font-size: 20px;
+}
+
+.at {
+  color: $light-turquoise;
+}
+
+.avatar-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 15px;
+  background: linear-gradient(45deg, turquoise, goldenrod);
+}
+
+.avatar {
+  border-radius: 50%;
+  background: white;
+  width: 250px;
+  display: block;
+}
+
+.secondary-content {
+  font-size: 18px;
+}
+
+.long-content {
+  text-align: left;
+  font-size: 18px;
+  max-width: 31em;
+  margin: 45px 0;
+
+  li {
+    margin: 10px 0;
+  }
+}
+
+.links {
+  font-size: 18px;
+  list-style-type: none;
+  padding: 0;
+
+  &__link {
+    display: inline;
+    margin: 0 10px;
+    white-space: nowrap;
+  }
+}
