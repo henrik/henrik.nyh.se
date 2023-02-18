@@ -15,7 +15,19 @@
     <div class="outer-container">
       <div class="inner-container">
         <div class="avatar-wrapper">
-          <img src="me.png" alt="" class="avatar">
+          <img src="me.png" alt="" id="avatar" class="avatar">
+          <script>
+            const img = document.images.avatar
+            const timeZone = "Europe/London"
+
+            try {
+              const hourString = new Date().toLocaleString("en-GB", { timeZone, hour: "numeric" })
+              const hour = parseInt(hourString, 10)
+              if (hour >= 23 || hour < 7) img.src = "me-sleeping.png"
+            } catch {
+              // Silently handle old browsers, browser not supporting TZ etc.
+            }
+          </script>
         </div>
 
         <p>I'm <b>Henrik Nyh</b>, a Swedish web developer.</p>
