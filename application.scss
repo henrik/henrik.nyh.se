@@ -7,6 +7,10 @@ $dark-turquoise: #01aa9c;
 $light-gray: #ededed;
 $dark-gray: #bbb;
 
+@mixin phone-size {
+  @media (max-width: 40rem) { @content; }
+}
+
 html, body {
   height: 100%;
   box-sizing: border-box;
@@ -43,7 +47,7 @@ body {
   padding-bottom: 70px;
 }
 
-@media only screen and (max-width: 40rem) {
+@include phone-size {
   body {
     align-items: start;
   }
@@ -108,6 +112,16 @@ h2 {
   border-radius: 50%;
   width: $side;
   height: $side;
+
+  @include phone-size {
+    $side: 200px;
+    width: $side;
+    height: $side;
+  }
+
+  .inner-container {
+    padding: 20px 0;
+  }
 
   &--small {
     $side: 80px;

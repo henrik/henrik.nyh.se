@@ -25,7 +25,7 @@ body {
   padding-bottom: 70px;
 }
 
-@media only screen and (max-width: 40rem) {
+@media (max-width: 40rem) {
   body {
     align-items: start;
   }
@@ -86,6 +86,15 @@ h2 {
   border-radius: 50%;
   width: 280px;
   height: 280px;
+}
+@media (max-width: 40rem) {
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+.avatar .inner-container {
+  padding: 20px 0;
 }
 .avatar--small {
   width: 80px;
