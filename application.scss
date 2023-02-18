@@ -85,18 +85,19 @@ h2 {
 .avatar-wrapper {
   display: inline-block;
   border-radius: 50%;
-  padding: 15px;
   background: linear-gradient(45deg, turquoise, goldenrod);
+  box-shadow: inset 0 0 5px rgba(black, 0.2);
 
   margin-bottom: 20px;
 }
 
 .avatar {
-  border-radius: 50%;
-  background: white;
-  width: 250px;
-  height: 250px;
+  $side: 280px;
+
   display: block;
+  border-radius: 50%;
+  width: $side;
+  height: $side;
 }
 
 .secondary-content {
