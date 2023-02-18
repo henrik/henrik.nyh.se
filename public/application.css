@@ -537,10 +537,9 @@ body {
 }
 
 body {
-  background: #fbfbf9;
+  background: white;
   color: #330;
-  text-shadow: 1px 1px 1px #fff;
-  font: 300 22px/1.5 "Source Sans Pro", sans-serif;
+  font: 300 20px/1.5 "Source Sans Pro", sans-serif;
 }
 
 a, b {
@@ -570,9 +569,18 @@ h2 {
   color: #b8d8d5;
 }
 
-.the-pug {
-  width: 320px;
-  height: 242px;
+.avatar-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 15px;
+  background: linear-gradient(45deg, turquoise, goldenrod);
+}
+
+.avatar {
+  border-radius: 50%;
+  background: white;
+  width: 250px;
+  display: block;
 }
 
 .secondary-content {
@@ -590,7 +598,7 @@ h2 {
 }
 
 .links {
-  font-size: 16px;
+  font-size: 18px;
   list-style-type: none;
   padding: 0;
 }
