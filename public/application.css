@@ -1,16 +1,17 @@
 html, body {
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-  text-align: center;
   display: flex;
   align-items: center;
-  display: -webkit-box;
-  -webkit-box-align: center;
+  text-align: center;
   background: white;
   color: #330;
   font: 300 20px/1.5 "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
 .outer-container {
@@ -20,18 +21,15 @@ body {
 }
 
 .inner-container {
-  padding: 40px 20px 70px;
+  padding-top: 40px;
+  padding-bottom: 70px;
 }
 
 @media only screen and (max-width: 40rem) {
   .inner-container {
-    padding: 40px 20px;
+    padding: 0;
   }
 }
-.the-pug {
-  margin-bottom: 20px;
-}
-
 .small-top-space {
   margin-top: 30px;
 }
@@ -72,6 +70,7 @@ h2 {
   border-radius: 50%;
   padding: 15px;
   background: linear-gradient(45deg, turquoise, goldenrod);
+  margin-bottom: 20px;
 }
 
 .avatar {
