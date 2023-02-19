@@ -3,13 +3,15 @@ title: "Weeknotes 2023, week 7"
 week_of: "February 13th"
 ---
 
+- @og_description = weeknote_week_of
+
 section.big-top-space
 
   .long-content
 
     hgroup.weeknote-hgroup
       h2 = current_page.data.title
-      p.weeknote-hgroup__week-of The week of #{current_page.data.week_of}.
+      p.weeknote-hgroup__week-of = weeknote_week_of
 
     markdown:
 

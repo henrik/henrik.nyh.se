@@ -45,4 +45,10 @@ helpers do
       "✧" * 3
     end
   end
+
+  def weeknote_week_of
+    "The week of #{current_page.data.week_of}."
+  end
+
+  def site_name = "Henrik Nyh"
 end
