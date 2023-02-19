@@ -33,9 +33,16 @@ helpers do
   end
 
   def list_link_to_unless_current(text, path)
-    pretty_current_path = "/" + current_page.path.delete_suffix(".html")
-    extra_classes = (path == pretty_current_path) ? "links__link--current" : ""
+    given_path_root = path.delete_prefix("/")
+    current_path_root = current_page.path.delete_suffix(".html").split("/").first
+    extra_classes = (given_path_root == current_path_root) ? "links__link--current" : ""
 
     list_link_to(text, path, extra_classes:)
+  end
+
+  def weeknote_separator
+    content_tag(:div, class: "weeknote-separator") do
+      "✧" * 3
+    end
   end
 end

@@ -154,3 +154,19 @@ h2 {
     }
   }
 }
+
+.weeknote-hgroup {
+  text-align: center;
+  margin-bottom: 45px;
+
+  &__week-of {
+    font-style: italic;
+    margin-top: -15px;
+  }
+}
+
+.weeknote-separator {
+  text-align: center;
+  color: $dark-gray;
+  margin: 30px 0;
+}
