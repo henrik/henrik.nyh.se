@@ -1,6 +1,7 @@
 require "slim"
-#require "action_view"
 
+# Required for Slim: https://github.com/slim-template/slim/issues/909
+require "action_view"
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions

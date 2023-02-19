@@ -5,5 +5,7 @@ ruby "~> 3.1"
 
 gem "middleman"
 
-# Getting "ActionView" errors from 5.
-gem "slim", "~> 4.0"
+# Required for Slim: https://github.com/slim-template/slim/issues/909
+gem "actionview"
+
+gem "slim"
