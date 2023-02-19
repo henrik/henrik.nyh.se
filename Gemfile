@@ -5,4 +5,5 @@ ruby "~> 3.1"
 
 gem "middleman"
 
+gem "actionview"
 gem "slim"

@@ -1,5 +1,5 @@
 require "slim"
-#require "action_view"
+require "action_view"
 
 
 # Activate and configure extensions
