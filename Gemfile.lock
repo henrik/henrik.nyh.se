@@ -85,10 +85,10 @@ GEM
     sassc (2.4.0)
       ffi (~> 1.9)
     servolux (0.13.0)
-    slim (4.1.0)
-      temple (>= 0.7.6, < 0.9)
+    slim (5.0.0)
+      temple (~> 0.10.0)
       tilt (>= 2.0.6, < 2.1)
-    temple (0.8.2)
+    temple (0.10.0)
     thor (1.2.1)
     tilt (2.0.11)
     toml (0.3.0)
@@ -104,7 +104,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman
-  slim (~> 4.0)
+  slim
 
 RUBY VERSION
    ruby 3.1.2p20
