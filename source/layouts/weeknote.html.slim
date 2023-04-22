@@ -1,0 +1,12 @@
+- year, week = year_and_week_of_page(current_page)
+- @title = "Weeknotes for week #{week}, #{year}"
+
+= wrap_layout :layout do
+  section.big-top-space
+    .long-content
+
+      hgroup.weeknote-hgroup
+        h2 = @title
+        p.weeknote-hgroup__week-of The week of #{week_of(year, week)}.
+
+      = yield.gsub("<hr />", weeknote_separator)

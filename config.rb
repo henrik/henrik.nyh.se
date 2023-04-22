@@ -3,22 +3,17 @@ require "slim"
 # Required for Slim: https://github.com/slim-template/slim/issues/909
 require "action_view"
 
-# Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
 activate :directory_indexes
 activate :asset_hash
 
-# Layouts
 # https://middlemanapp.com/basics/layouts/
-
-# Per-page layout changes
 page "/*.xml", layout: false
 page "/*.json", layout: false
 page "/*.txt", layout: false
+page "/weeknotes/*", layout: "weeknote"
 
-# Helpers
-# Methods defined in the helpers block are available in templates
+# Methods defined in the helpers block are available in templates.
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
@@ -40,14 +35,18 @@ helpers do
     list_link_to(text, path, extra_classes:)
   end
 
-  def weeknote_separator
-    content_tag(:div, class: "weeknote-separator") do
-      "✧" * 3
-    end
+  def week_of(year, week_number)
+    week_start = Date.commercial(year, week_number, 1)  # 1 is Monday.
+    week_start.strftime("%B #{week_start.day.ordinalize}")
   end
 
-  def weeknote_week_of
-    "The week of #{current_page.data.week_of}."
+  def year_and_week_of_page(page)
+    basename = page.path.delete_prefix("weeknotes/").delete_suffix(".html")
+    year, week = basename.match(/\A(\d{4})-w(\d+)\z/).captures.map(&:to_i)
+  end
+
+  def weeknote_separator
+    content_tag(:div, class: "weeknote-separator") { "✧" * 3 }
   end
 
   def site_name = "Henrik Nyh"

@@ -4,7 +4,7 @@ html
     meta charset="utf-8"
     link rel="shortcut icon" href="/images/favicon.png"
     meta name="viewport" content="width=device-width, initial-scale=1"
-    title = [ current_page.data.title, site_name ].compact.join(" • ")
+    title = [ (current_page.data.title || @title), site_name ].compact.join(" • ")
     link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"
     = stylesheet_link_tag "site"
 

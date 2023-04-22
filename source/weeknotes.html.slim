@@ -6,16 +6,18 @@ section.big-top-space
 
   .long-content
 
-    h2#2023 2023
+    ruby:
+      data = sitemap.resources
+        .select { _1.path.start_with?("weeknotes/") }
+        .map { |page|
+          year, week = year_and_week_of_page(page)
+          OpenStruct.new(year:, week:, page:)
+        }
 
-    markdown:
+    - data.group_by(&:year).each do |year, year_data|
+      h2 id=year = year
 
-      * [Week 15 (week of April 10th)](/weeknotes/2023-w15)
-      * [Week 14 (week of April 3rd)](/weeknotes/2023-w14)
-      * [Week 13 (week of March 27th)](/weeknotes/2023-w13)
-      * [Week 12 (week of March 20th)](/weeknotes/2023-w12)
-      * [Week 11 (week of March 13th)](/weeknotes/2023-w11)
-      * [Week 10 (week of March 6th)](/weeknotes/2023-w10)
-      * [Week 9 (week of February 27th)](/weeknotes/2023-w9)
-      * [Week 8 (week of February 20th)](/weeknotes/2023-w8)
-      * [Week 7 (week of February 13th)](/weeknotes/2023-w7)
+      ul
+        - year_data.sort_by(&:week).reverse.each do |datum|
+          - week = datum.week
+          li = link_to "Week #{week} (week of #{week_of(year, week)})", datum.page.path
