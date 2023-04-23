@@ -1,5 +1,8 @@
 - year, week = year_and_week_of_page(current_page)
+- week_of_string = "The week of #{week_of(year, week)}."
+
 - @title = "Weeknotes for week #{week}, #{year}"
+- @og_description = week_of_string
 
 = wrap_layout :layout do
   section.big-top-space
@@ -7,6 +10,6 @@
 
       hgroup.weeknote-hgroup
         h2 = @title
-        p.weeknote-hgroup__week-of The week of #{week_of(year, week)}.
+        p.weeknote-hgroup__week-of = week_of_string
 
       = yield.gsub("<hr />", weeknote_separator)
