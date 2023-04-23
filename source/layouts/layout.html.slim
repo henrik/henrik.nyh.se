@@ -12,7 +12,7 @@ html
     link rel="me" href="https://ruby.social/@henrik"
 
     meta property="og:site_name" content=site_name
-    meta property="og:title" content=(current_page.data.title || site_name)
+    meta property="og:title" content=((current_page.data.title || @title) || site_name)
 
     - if @og_description
       meta property="og:description" content=@og_description
