@@ -1,8 +1,6 @@
 $turquoise: #23ccbe;
 $dark-turquoise: #01aa9c;
 
-$gold: goldenrod;
-
 $light-gray: #ededed;
 $dark-gray: #bbb;
 $almost-black: #111;
@@ -11,7 +9,6 @@ $text-color: $almost-black;
 
 $font-size-big: 20px;
 $font-size-medium: 18px;
-$font-size-small: 16px;
 
 @mixin phone-size {
   @media (max-width: 40rem) { @content; }
@@ -61,9 +58,6 @@ body {
   }
 }
 
-.mid-top-space { margin-top: 35px; }
-.big-top-space { margin-top: 45px; }
-
 a, b {
   font-weight: 400;
 }
@@ -78,97 +72,5 @@ a {
   &:hover, &:focus {
     color: $dark-turquoise;
     border-color: $dark-gray;
-  }
-}
-
-.a {
-  &--undecorated {
-    border: 0;
-  }
-}
-
-h2 {
-  margin-top: 45px;
-  font-size: $font-size-big;
-}
-
-.avatar-wrapper {
-  display: inline-block;
-  border-radius: 50%;
-  background: linear-gradient(45deg, $turquoise, $gold);
-  box-shadow: inset 0 0 5px rgba(black, 0.2);
-
-  margin-bottom: -25px;
-}
-
-.avatar {
-  $side: 280px;
-
-  display: block;
-  border-radius: 50%;
-  width: $side;
-  height: $side;
-
-  @include phone-size {
-    $side: 200px;
-    width: $side;
-    height: $side;
-  }
-
-  .inner-container {
-    padding: 20px 0;
-  }
-
-  &--small {
-    $side: 80px;
-    width: $side;
-    height: $side;
-  }
-}
-
-.long-content {
-  text-align: left;
-  font-size: $font-size-medium;
-  max-width: 31em;
-  margin: 45px 0;
-
-  li {
-    margin: 10px 0;
-  }
-}
-
-.links {
-  font-size: $font-size-medium;
-  list-style-type: none;
-  padding: 0;
-
-  &__link {
-    display: inline;
-    margin: 0 10px;
-    white-space: nowrap;
-
-    &--current {
-      a {
-        color: $text-color;
-        border-bottom: none;
-      }
-    }
-  }
-}
-
-figure {
-  text-align: center;
-
-  img {
-    max-width: 100%;
-  }
-}
-
-figcaption {
-  font-style: italic;
-  font-size: $font-size-small;
-
-  p {
-    margin: 0;
   }
 }

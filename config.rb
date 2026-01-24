@@ -16,23 +16,5 @@ page "/*.txt", layout: false
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
-  def home_page?
-    current_page.destination_path == "index.html"
-  end
-
-  def list_link_to(text, path, extra_classes: "")
-    content_tag(:li, class: "links__link #{extra_classes}".strip) do
-      link_to(text, path)
-    end
-  end
-
-  def list_link_to_unless_current(text, path)
-    given_path_root = path.delete_prefix("/")
-    current_path_root = current_page.path.delete_suffix(".html").split("/").first
-    extra_classes = (given_path_root == current_path_root) ? "links__link--current" : ""
-
-    list_link_to(text, path, extra_classes:)
-  end
-
   def site_name = "Henrik Nyh"
 end

@@ -4,7 +4,7 @@ html
     meta charset="utf-8"
     link rel="shortcut icon" href="/images/favicon.png"
     meta name="viewport" content="width=device-width, initial-scale=1"
-    title = [ (current_page.data.title || @title), site_name ].compact.join(" • ")
+    title = site_name
     link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet" type="text/css"
     = stylesheet_link_tag "site"
 
@@ -21,15 +21,4 @@ html
     .outer-container
       .inner-container
 
-        a href=(home_page? ? nil : "/") class="a--undecorated"
-          .avatar-wrapper
-            img#avatar.avatar class=("avatar--small" unless home_page?) src="/images/me.png" alt=""
-
-        nav class=(home_page? ? "big-top-space" : "mid-top-space")
-          ul.links
-            = list_link_to_unless_current("Projects", "/projects")
-            = list_link_to_unless_current("Elsewhere", "/elsewhere")
-
         = yield
-
-        = javascript_include_tag "site"
