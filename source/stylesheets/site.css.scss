@@ -7,7 +7,7 @@ $almost-black: #111;
 
 $text-color: $almost-black;
 
-$font-size-big: 20px;
+$font-size-big: 22px;
 $font-size-medium: 18px;
 
 @mixin phone-size {
@@ -72,5 +72,33 @@ a {
   &:hover, &:focus {
     color: $dark-turquoise;
     border-color: $dark-gray;
+  }
+}
+
+.intro {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: $font-size-big;
+  margin: 40px 0 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin: 10px 0;
+  }
+
+  &.horizontal {
+    li {
+      display: inline-block;
+      margin-right: 20px;
+
+      &:last-child { margin-right: 0; }
+    }
   }
 }
