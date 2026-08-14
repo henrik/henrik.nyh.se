@@ -1,11 +1,10 @@
-$turquoise: #23ccbe;
-$dark-turquoise: #01aa9c;
+$yellow: #ffd53d;
 
-$light-gray: #ededed;
-$dark-gray: #bbb;
-$almost-black: #111;
+$cream: #f5f0d6;
+$near-black: #0f1219;
 
-$text-color: $almost-black;
+$background-color: $near-black;
+$text-color: $cream;
 
 $font-size-big: 22px;
 $font-size-medium: 18px;
@@ -15,17 +14,27 @@ $font-size-medium: 18px;
 }
 
 html, body {
-  height: 100%;
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+
+  // Gives us dark scrollbars and form controls.
+  color-scheme: dark;
+}
+
 body {
+  // min-height rather than height: a viewport shorter than the content grows to
+  // fit it instead of clipping, which is what makes centering safe everywhere.
+  min-height: 100%;
+
   display: flex;
   align-items: center;
 
   text-align: center;
 
-  background: white;
+  background-color: $background-color;
   color: $text-color;
   font: 300 $font-size-big "Source Sans Pro", sans-serif;
   line-height: 1.5;
@@ -35,16 +44,12 @@ body {
 
   @include phone-size {
     font-size: $font-size-medium;
-    align-items: start;
   }
 }
 
 .outer-container {
   max-width: 1200px;
   margin: 0 auto;
-
-  // Prevent the vertically centered content from bursting through the top of a short viewport.
-  max-height: 100%;
 }
 
 .inner-container {
@@ -64,14 +69,20 @@ a, b {
 
 a {
   &, &:visited {
-    color: $turquoise;
+    color: $yellow;
     text-decoration: none;
-    border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid rgba($yellow, 0.3);
+
+    padding: 1px;
+    border-radius: 2px;
+    background: linear-gradient($yellow, $yellow) no-repeat 0 100% / 100% 0;
+    transition: background-size 0.14s ease, color 0.09s ease;
   }
 
   &:hover, &:focus {
-    color: $dark-turquoise;
-    border-color: $dark-gray;
+    color: $background-color;
+    border-bottom-color: transparent;
+    background-size: 100% 100%;
   }
 }
 
