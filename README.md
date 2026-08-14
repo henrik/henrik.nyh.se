@@ -10,7 +10,7 @@ Deployed to [Netlify](https://www.netlify.com/).
 
     bundle
     bundle exec middleman
-    open https://localhost:4567
+    open http://localhost:4567
 
 ## Production
 

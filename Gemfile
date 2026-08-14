@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # NOTE: Also update .ruby-version for Netlify.
-ruby "~> 3.1"
+ruby "~> 4.0"
 
 gem "middleman"
 
