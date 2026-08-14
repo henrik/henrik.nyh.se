@@ -4,10 +4,6 @@ $cream: #f5f0d6;
 $near-black: #0f1219;
 
 $background-color: $near-black;
-$text-color: $cream;
-
-$font-size-big: 22px;
-$font-size-medium: 18px;
 
 @mixin phone-size {
   @media (max-width: 40rem) { @content; }
@@ -35,16 +31,12 @@ body {
   text-align: center;
 
   background-color: $background-color;
-  color: $text-color;
-  font: 300 $font-size-big "Source Sans Pro", sans-serif;
+  color: $cream;
+  font: 300 22px "Source Sans Pro", sans-serif;
   line-height: 1.5;
 
   margin: 0;
   padding: 20px;
-
-  @include phone-size {
-    font-size: $font-size-medium;
-  }
 }
 
 .outer-container {
@@ -91,7 +83,7 @@ a {
 }
 
 h2 {
-  font-size: $font-size-big;
+  font-size: inherit;
   margin: 40px 0 0;
 }
 
