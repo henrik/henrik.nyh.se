@@ -94,6 +94,18 @@ a {
 
 a, b, strong { font-weight: 400; }
 
+.avatar {
+  --size: 180px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto 35px;
+  border-radius: 50%;
+
+  // Keeps it circular rather than oval if the source ever stops being square.
+  object-fit: cover;
+}
+
 .intro, h2 {
   font-family: $fraunces-stack;
 
