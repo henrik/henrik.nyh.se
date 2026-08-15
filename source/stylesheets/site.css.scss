@@ -4,6 +4,9 @@ $cream: #f5f0d6;
 $near-black: #0f1219;
 
 $background-color: $near-black;
+$big-font-size: 1.1em;
+
+$fraunces-stack: "Fraunces", Georgia, serif;
 
 @mixin phone-size {
   @media (max-width: 40rem) { @content; }
@@ -55,10 +58,6 @@ body {
   }
 }
 
-a, b {
-  font-weight: 400;
-}
-
 a {
   &, &:visited {
     color: $yellow;
@@ -78,12 +77,23 @@ a {
   }
 }
 
+a, b, strong { font-weight: 400; }
+
 .intro {
-  margin-bottom: 60px;
+  font-family: $fraunces-stack;
+  font-size: $big-font-size;
+  font-weight: 200;
+  margin-bottom: 70px;
 }
 
 h2 {
-  font-size: inherit;
+  font-family: $fraunces-stack;
+  font-size: $big-font-size;
+  font-weight: 600;
+
+  // WONK swaps in Fraunces' quirky alternates; SOFT rounds off the terminals.
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+
   margin: 40px 0 0;
 }
 
