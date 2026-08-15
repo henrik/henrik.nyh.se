@@ -81,14 +81,14 @@ a, b, strong { font-weight: 400; }
 
 .intro {
   font-family: $fraunces-stack;
-  font-size: $big-font-size;
+  font-size: 1.1em;
   font-weight: 200;
   margin-bottom: 70px;
 }
 
 h2 {
   font-family: $fraunces-stack;
-  font-size: $big-font-size;
+  font-size: 1.3em;
   font-weight: 600;
 
   // WONK swaps in Fraunces' quirky alternates; SOFT rounds off the terminals.
