@@ -79,21 +79,22 @@ a {
 
 a, b, strong { font-weight: 400; }
 
-.intro {
+.intro, h2 {
   font-family: $fraunces-stack;
+
+  // WONK swaps in Fraunces' quirky alternates; SOFT rounds off the terminals.
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+}
+
+.intro {
   font-size: 1.1em;
   font-weight: 200;
   margin-bottom: 70px;
 }
 
 h2 {
-  font-family: $fraunces-stack;
   font-size: 1.3em;
   font-weight: 600;
-
-  // WONK swaps in Fraunces' quirky alternates; SOFT rounds off the terminals.
-  font-variation-settings: "SOFT" 30, "WONK" 1;
-
   margin: 40px 0 0;
 }
 
