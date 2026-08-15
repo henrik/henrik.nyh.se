@@ -60,13 +60,25 @@ body {
 a {
   &, &:visited {
     position: relative;
+
+    // inline-block so a link that wraps stays a single box: the underline and the hover fill then cover the whole link, rather than covering the first line and leaving the rest bare and dark on dark.
+    display: inline-block;
+
     color: $yellow;
-    text-decoration: none;
+
+    // A real underline rather than the pseudo-element, so a wrapped link gets one under each line, hugging the text instead of the box.
+    text-decoration: underline;
+    text-decoration-color: rgba($yellow, 0.3);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+
     padding: 1px 0;
-    transition: color 0.09s ease;
+    transition-property: color, text-decoration-color;
+    transition-duration: 0.09s;
+    transition-timing-function: ease;
   }
 
-  // Doubles as the resting underline and the hover box: it grows up from the baseline, overshoots the text a little, and skews.
+  // The hover box: grows up from the baseline, overshoots the text a little, and skews.
   &::before {
     content: "";
     position: absolute;
@@ -74,20 +86,23 @@ a {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
-    background: rgba($yellow, 0.3);
-    transition: height 0.14s ease, width 0.14s ease,
-                transform 0.14s ease, background-color 0.14s ease;
+    height: 0;
+    background: $yellow;
+    transition-property: height, width, transform;
+    transition-duration: 0.14s;
+    transition-timing-function: ease;
   }
 
   &:hover, &:focus {
     color: $background-color;
+
+    // Only show the box; the underline paints on top of it and would read as a stripe across the fill.
+    text-decoration-color: transparent;
   }
 
   &:hover::before, &:focus::before {
     height: 100%;
     width: calc(100% + 0.3em);
-    background: $yellow;
     transform: translateX(-0.15em) skew(-5deg);
   }
 }
