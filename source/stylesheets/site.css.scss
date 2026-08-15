@@ -24,8 +24,7 @@ html {
 }
 
 body {
-  // min-height rather than height: a viewport shorter than the content grows to
-  // fit it instead of clipping, which is what makes centering safe everywhere.
+  // min-height rather than height: a viewport shorter than the content grows to fit it instead of clipping, which is what makes centering safe everywhere.
   min-height: 100%;
 
   display: flex;
@@ -60,20 +59,36 @@ body {
 
 a {
   &, &:visited {
+    position: relative;
     color: $yellow;
     text-decoration: none;
-    border-bottom: 1px solid rgba($yellow, 0.3);
+    padding: 1px 0;
+    transition: color 0.09s ease;
+  }
 
-    padding: 1px;
-    border-radius: 2px;
-    background: linear-gradient($yellow, $yellow) no-repeat 0 100% / 100% 0;
-    transition: background-size 0.14s ease, color 0.09s ease;
+  // Doubles as the resting underline and the hover box: it grows up from the baseline, overshoots the text a little, and skews.
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba($yellow, 0.3);
+    transition: height 0.14s ease, width 0.14s ease,
+                transform 0.14s ease, background-color 0.14s ease;
   }
 
   &:hover, &:focus {
     color: $background-color;
-    border-bottom-color: transparent;
-    background-size: 100% 100%;
+  }
+
+  &:hover::before, &:focus::before {
+    height: 100%;
+    width: calc(100% + 0.3em);
+    background: $yellow;
+    transform: translateX(-0.15em) skew(-5deg);
   }
 }
 
