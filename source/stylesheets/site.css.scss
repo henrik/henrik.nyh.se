@@ -4,7 +4,6 @@ $cream: #f5f0d6;
 $near-black: #0f1219;
 
 $background-color: $near-black;
-$big-font-size: 1.1em;
 
 $fraunces-stack: "Fraunces", Georgia, serif;
 
@@ -132,12 +131,20 @@ a, b, strong { font-weight: 400; }
   font-size: 1.1em;
   font-weight: 200;
   margin-bottom: 70px;
+
+  @include phone-size {
+    font-size: 0.9em;
+  }
 }
 
 h2 {
   font-size: 1.3em;
   font-weight: 600;
   margin: 40px 0 0;
+
+  @include phone-size {
+    font-size: 1.1em;
+  }
 }
 
 ul {
