@@ -137,7 +137,7 @@ a, b, strong { font-weight: 400; }
   margin-bottom: 70px;
 
   @include phone-size {
-    font-size: 0.9em;
+    font-size: 1.0em;
   }
 }
 
