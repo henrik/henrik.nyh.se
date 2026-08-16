@@ -33,11 +33,15 @@ body {
 
   background-color: $background-color;
   color: $cream;
-  font: 300 22px "Source Sans Pro", sans-serif;
+  font: 300 1.3em "Source Sans Pro", sans-serif;
   line-height: 1.5;
 
   margin: 0;
   padding: 20px;
+
+  @include phone-size {
+    font-size: 1.2em;
+  }
 }
 
 .outer-container {
