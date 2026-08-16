@@ -74,8 +74,12 @@ body {
 
 .about {
   @include wide-size {
-    // Nothing follows it in this column, so the gap below is dead space that would throw off the centring.
-    .intro { margin-bottom: 0; }
+    // Nothing follows it in this column, so the gap below is dead space that would throw off the centring. The last paragraph's own margin counts too: a grid item won't let it collapse out, so it pads the bottom of the column and lifts everything above it.
+    .intro {
+      margin-bottom: 0;
+
+      p:last-child { margin-bottom: 0; }
+    }
   }
 }
 
