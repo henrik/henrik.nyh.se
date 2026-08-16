@@ -11,6 +11,10 @@ $fraunces-stack: "Fraunces", Georgia, serif;
   @media (max-width: 40rem) { @content; }
 }
 
+@mixin wide-size {
+  @media (min-width: 64rem) { @content; }
+}
+
 html, body {
   box-sizing: border-box;
 }
@@ -57,6 +61,28 @@ body {
   @include phone-size {
     padding-top: 0;
     padding-bottom: 30px;
+  }
+
+  // Avatar and intro to the left, the headed lists to the right. Both groups are already contiguous in source order, so narrow screens just stack them.
+  @include wide-size {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+  }
+}
+
+.about {
+  @include wide-size {
+    // Nothing follows it in this column, so the gap below is dead space that would throw off the centring.
+    .intro { margin-bottom: 0; }
+  }
+}
+
+.sections {
+  @include wide-size {
+    // The columns are already spaced apart by the grid.
+    h2:first-child { margin-top: 0; }
   }
 }
 
